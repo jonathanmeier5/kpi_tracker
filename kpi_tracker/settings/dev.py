@@ -11,13 +11,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-
-
-try:
-    from SECRET import secret
-    secret.set_secret()
-except:
-    print("Could not import secret module")
     
     
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
