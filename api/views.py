@@ -7,6 +7,10 @@ from .serializers import LocationSerializer, UserSerializer
 
 # Create your views here.
 
+from rest_framework.authtoken.models import Token
+for user in User.objects.all():
+    Token.objects.get_or_create(user=user)
+
 
 class LocationList(generics.ListCreateAPIView):
     queryset = Location.objects.all()
